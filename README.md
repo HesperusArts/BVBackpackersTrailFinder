@@ -8,7 +8,7 @@ Supports images, audio and video embeddings, and Leaflet TileLayer/geojson overl
 
 ## Live links (replace with your own)
 - Leaflet Map https://hesperusarts.github.io/BVBackpackersTrailFinder/
-- Google Sheets template https://docs.google.com/spreadsheets/d/132efnlnxS0SKshwXW6wOlNPqm3qHFXKu4zrNAqZpojQ/edit#gid=70869349
+- Google Sheets template https://docs.google.com/spreadsheets/d/1oFwmanrsxIPm-8WnRlrz_gnZfVdSQTRnQLTUecqRNYk/edit#gid=0
 
 ## Create Your Own
 - See step-by-step tutorial in *Hands-On Data Visualization* https://HandsOnDataViz.org/leaflet-storymaps-with-google-sheets.html
