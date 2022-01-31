@@ -160,7 +160,7 @@ $(window).on('load', function() {
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
             interactive: c['Marker'] === 'Hidden' ? false : true,
           }
-        ).bindPopup("This is the Transamerica Pyramid").openPopup();
+        ).bindPopup("This is the Transamerica Pyramid").openPopup()
         );
 
       } else {
