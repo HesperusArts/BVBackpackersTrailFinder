@@ -153,7 +153,8 @@ $(window).on('load', function() {
           L.marker([lat, lon], {
             icon: L.ExtraMarkers.icon({
               icon: 'fa-number',
-              number: c['Marker'] === 'Plain' ? '' : 'Fred',
+              number: c['Marker'] === 'Plain' ? '' : chapterCount,
+              title:'Fred',
               markerColor: c['Marker Color'] || 'blue'
             }),
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
