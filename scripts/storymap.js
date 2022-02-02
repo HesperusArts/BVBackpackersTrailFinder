@@ -366,7 +366,7 @@ $(window).on('load', function() {
                     fillOpacity: feature.properties.fillOpacity || props.fillOpacity || 0.5,
                   }
                 }
-              }).bindTooltip(feature.name).openTooltip().addTo(map);
+              }).bindTooltip(geojson.name).openTooltip().addTo(map);
             });
           }
 
