@@ -366,7 +366,7 @@ $(window).on('load', function() {
                     fillOpacity: feature.properties.fillOpacity || props.fillOpacity || 0.5,
                   }
                 }
-              }).bindPopup(feature.properties.Short_Desc).openPopup().addTo(map);
+              }).bindTooltip('Fred').openTooltip().addTo(map);
             });
           }
 
