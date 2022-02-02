@@ -160,7 +160,7 @@ $(window).on('load', function() {
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
             interactive: c['Marker'] === 'Hidden' ? false : true,
           }
-        ).bindPopup(c['Chapter']).openPopup()
+        ).bindTooltip(c['Chapter']).openTooltip()
         );
 
       } else {
@@ -366,7 +366,7 @@ $(window).on('load', function() {
                     fillOpacity: feature.properties.fillOpacity || props.fillOpacity || 0.5,
                   }
                 }
-              }).bindTooltip('Fred').openTooltip().addTo(map);
+              }).bindTooltip(feature.name).openTooltip().addTo(map);
             });
           }
 
