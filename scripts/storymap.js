@@ -128,6 +128,9 @@ $(window).on('load', function() {
         position: getSetting('_zoomControls')
       }).addTo(map);
     }
+	  
+    //enable scroll wheel zoom
+    map.once('focus', function() { map.scrollWheelZoom.enable(); });
 
     var markers = [];
 
