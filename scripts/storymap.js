@@ -60,15 +60,15 @@ $(window).on('load', function() {
   }
 
 /**
- * set up popups for geojson features
+ * set up tooltips for geojson features
 */
   function onEachFeature(feature, layer) {
-	var popupContent = "<p> "+feature.properties.name + "</p>";
-	if (feature.properties && feature.properties.popupContent) {
-			popupContent += feature.properties.popupContent;
+	var tooltipContent = "<p> "+feature.properties.name + "</p>";
+	if (feature.properties && feature.properties.tooltipContent) {
+			tooltipContent += feature.properties.tooltipContent;
 	}
 
-	layer.bindPopup(popupContent);
+	layer.bindTooltip(tooltipContent);
   }
 
   /**
