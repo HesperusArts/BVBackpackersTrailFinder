@@ -60,6 +60,19 @@ $(window).on('load', function() {
   }
 
   /**
+  * set up popups for geojson features
+  */
+  	function onEachFeature(feature, layer) {
+			var popupContent = "<p> "+feature.properties.name + "</p>";
+
+			if (feature.properties && feature.properties.popupContent) {
+				popupContent += feature.properties.popupContent;
+			}
+
+			layer.bindPopup(popupContent);
+		}
+
+  /**
    * Returns the value of a setting s
    * getSetting(s) is equivalent to documentSettings[constants.s]
    */
@@ -364,9 +377,10 @@ $(window).on('load', function() {
                     opacity: feature.properties.opacity || props.opacity || 0.5,
                     color: feature.properties.color || props.color || '#cccccc',
                     fillOpacity: feature.properties.fillOpacity || props.fillOpacity || 0.5,
-                  }
+                  },
+                onEachFeature: onEachFeature   
                 }
-              }).bindTooltip(geojson.name).openTooltip().addTo(map);
+              }).addTo(map);
             });
           }
 
