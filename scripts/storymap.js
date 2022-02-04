@@ -379,7 +379,7 @@ $(window).on('load', function() {
                     opacity: feature.properties.opacity || props.opacity || 0.5,
                     color: feature.properties.color || props.color || '#cccccc',
                     fillOpacity: feature.properties.fillOpacity || props.fillOpacity || 0.5,
-		    dashArray: feature.properties.dashArray || props.dashArray || "4 1",
+		    dashArray: {4 1},
                    }
                 },
 		onEachFeature: onEachFeature        
