@@ -68,7 +68,7 @@ $(window).on('load', function() {
 			tooltipContent += feature.properties.tooltipContent;
 	}
 
-	layer.bindTooltip(tooltipContent, {permanent: true; sticky: true}).openTooltip();
+	layer.bindTooltip(tooltipContent, {sticky: true}).openTooltip();
   }
 
   /**
@@ -175,7 +175,7 @@ $(window).on('load', function() {
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
             interactive: c['Marker'] === 'Hidden' ? false : true,
           }
-        ).bindTooltip(c['Chapter']).openTooltip()
+        ).bindTooltip(c['Chapter'], {permanent: true}).openTooltip()
         );
 
       } else {
