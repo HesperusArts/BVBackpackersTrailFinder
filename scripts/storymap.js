@@ -175,7 +175,7 @@ $(window).on('load', function() {
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
             interactive: c['Marker'] === 'Hidden' ? false : true,
           }
-        ).bindTooltip(c['Chapter'], {permanent: true}).openTooltip()
+        ).bindTooltip(c['Chapter']).openTooltip()
         );
 
       } else {
