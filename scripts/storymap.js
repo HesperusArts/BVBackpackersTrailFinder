@@ -169,13 +169,12 @@ $(window).on('load', function() {
             icon: L.ExtraMarkers.icon({
               icon: 'fa-number',
               number: c['Marker'] === 'Plain' ? '' : chapterCount,
-              title:'Fred',
               markerColor: c['Marker Color'] || 'blue'
             }),
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
             interactive: c['Marker'] === 'Hidden' ? false : true,
           }
-        ).bindTooltip(c['Chapter']).openTooltip()
+        )
         );
 
       } else {
