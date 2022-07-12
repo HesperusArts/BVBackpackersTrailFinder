@@ -68,7 +68,7 @@ $(window).on('load', function() {
 			tooltipContent += feature.properties.tooltipContent;
 	}
 
-	layer.bindTooltip(tooltipContent, {permanent: true, sticky: true}).openTooltip();
+	layer.bindTooltip(tooltipContent, {className: 'trailname', permanent: true, sticky: true}).openTooltip();
   }
 
   /**
