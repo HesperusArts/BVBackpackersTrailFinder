@@ -112,7 +112,7 @@ a.source:visited {
 }
 
 .trailname {
-    padding: 0px;
+    padding: 4px;
     background-color: rgba(0, 100, 0, 0.4);
     border: 2x solid #000;
     color: #000;
