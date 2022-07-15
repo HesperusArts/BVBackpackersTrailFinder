@@ -63,7 +63,7 @@ $(window).on('load', function() {
  * set up tooltips for geojson features
 */
   function onEachFeature(feature, layer) {
-	var tooltipContent = "<p> "+feature.properties.name + "</p>";
+	var tooltipContent = feature.properties.name;
 	var tooltipStyle = feature.properties.ttstyle;
 	if (feature.properties && feature.properties.tooltipContent) {
 			tooltipContent += feature.properties.tooltipContent;
