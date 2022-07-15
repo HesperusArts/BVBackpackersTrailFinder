@@ -64,11 +64,12 @@ $(window).on('load', function() {
 */
   function onEachFeature(feature, layer) {
 	var tooltipContent = "<p> "+feature.properties.name + "</p>";
+	var tooltipStyle = feature.properties.ttstyle;
 	if (feature.properties && feature.properties.tooltipContent) {
 			tooltipContent += feature.properties.tooltipContent;
 	}
 
-	layer.bindTooltip(tooltipContent, {className: 'trailname', permanent: true, sticky: true}).openTooltip();
+	layer.bindTooltip(tooltipContent, {className: tooltipStyle, permanent: true, sticky: true}).openTooltip();
   }
 
   /**
