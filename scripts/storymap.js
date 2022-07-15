@@ -355,6 +355,16 @@ $(window).on('load', function() {
 
           }
 
+          // Fly to the new marker destination if latitude and longitude exist
+          if (c['Latitude'] && c['Longitude']) {
+            var zoom = c['Zoom'] ? c['Zoom'] : CHAPTER_ZOOM;
+            map.flyTo([c['Latitude'], c['Longitude']], zoom, {
+              animate: true,
+              duration: 2, // default is 2 seconds
+            });
+          }
+
+		
           if (c['GeoJSON Overlay']) {
             $.getJSON(c['GeoJSON Overlay'], function(geojson) {
 
@@ -384,15 +394,6 @@ $(window).on('load', function() {
                 },
 		onEachFeature: onEachFeature        
               }).addTo(map);
-            });
-          }
-
-          // Fly to the new marker destination if latitude and longitude exist
-          if (c['Latitude'] && c['Longitude']) {
-            var zoom = c['Zoom'] ? c['Zoom'] : CHAPTER_ZOOM;
-            map.flyTo([c['Latitude'], c['Longitude']], zoom, {
-              animate: true,
-              duration: 2, // default is 2 seconds
             });
           }
 
