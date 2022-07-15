@@ -126,6 +126,21 @@ a.source:visited {
     line-height: 1;
 }
 
+.trail {
+    padding: 4px;
+    background-color: rgba(0, 100, 0, 0.4);
+    border: 2x solid #000;
+    color: #000;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    line-height: 1;
+}
+
 .description {
   margin: 20px;
   text-align: left;
