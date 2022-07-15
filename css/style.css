@@ -113,7 +113,7 @@ a.source:visited {
 
 .road {
     padding: 4px;
-    background-color: rgba(30, 30, 30, 0.4);
+    background-color: rgba(200, 200, 200, 0.4);
     border: 2x solid #000;
     color: #000;
     white-space: nowrap;
