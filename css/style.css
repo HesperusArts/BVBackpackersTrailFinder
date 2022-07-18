@@ -114,7 +114,7 @@ a.source:visited {
 .road {
     padding: 4px;
     background-color: rgba(255, 255, 255, 0.4);
-    border: 2x solid #000;
+    border: 2px solid #000;
     color: #000;
     white-space: nowrap;
     -webkit-user-select: none;
@@ -129,7 +129,7 @@ a.source:visited {
 .trail {
     padding: 4px;
     background-color: rgba(0, 100, 0, 0.4);
-    border: 2x solid #000;
+    border: 2px solid #000;
     color: #000;
     white-space: nowrap;
     -webkit-user-select: none;
