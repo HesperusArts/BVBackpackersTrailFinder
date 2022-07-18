@@ -1,5 +1,7 @@
 $(window).on('load', function() {
   var documentSettings = {};
+  var geoJsonOverlay;
+
 
   // Some constants, such as default settings
   const CHAPTER_ZOOM = 15;
@@ -158,7 +160,6 @@ $(window).on('load', function() {
 
     var currentlyInFocus; // integer to specify each chapter is currently in focus
     var overlay;  // URL of the overlay for in-focus chapter
-    var geoJsonOverlay;
 
     for (i in chapters) {
       var c = chapters[i];
