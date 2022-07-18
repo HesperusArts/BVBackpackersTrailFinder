@@ -102,6 +102,10 @@ $(window).on('load', function() {
     }).addTo(map);
   }
 
+//
+// Here begins the main function of the page: initMap, whcih runs almost to teh bottom of this file.
+//
+	
   function initMap(options, chapters) {
     createDocumentSettings(options);
 
