@@ -448,9 +448,6 @@ $(window).on('load', function() {
         markers[i].addTo(map);
         markers[i]['_pixelsAbove'] = pixelsAbove[i];
         markers[i].on('click', function() {
-          if (map.hasLayer(geoJsonOverlay)) {
-            map.removeLayer(geoJsonOverlay);
-          }
           var pixels = parseInt($(this)[0]['_pixelsAbove']) + 5;
           $('div#contents').animate({
             scrollTop: pixels + 'px'});
