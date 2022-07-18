@@ -69,7 +69,7 @@ $(window).on('load', function() {
 			tooltipContent += feature.properties.tooltipContent;
 	}
 
-	layer.unbindTooltip().bindTooltip(tooltipContent, {className: tooltipStyle, permanent: true, sticky: true}).openTooltip();
+	layer.bindTooltip(tooltipContent, {className: tooltipStyle, sticky: true}).openTooltip();
   }
 
   /**
