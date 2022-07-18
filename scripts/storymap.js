@@ -1,7 +1,5 @@
 $(window).on('load', function() {
   var documentSettings = {};
-  var geoJsonOverlay;
-
 
   // Some constants, such as default settings
   const CHAPTER_ZOOM = 15;
@@ -105,13 +103,14 @@ $(window).on('load', function() {
   }
 
 //
-// Here begins the main function of the page: initMap, whcih runs almost to teh bottom of this file.
+// Here begins the main function of the page: initMap, which runs almost to the bottom of this file.
 //
 	
   function initMap(options, chapters) {
     createDocumentSettings(options);
 
     var chapterContainerMargin = 70;
+    var geoJsonOverlay;
 
     document.title = getSetting('_mapTitle');
     $('#header').append('<h1>' + (getSetting('_mapTitle') || '') + '</h1>');
