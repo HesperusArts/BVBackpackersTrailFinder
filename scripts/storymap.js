@@ -1,5 +1,7 @@
 $(window).on('load', function() {
   var documentSettings = {};
+  var chapterZoom = 9; //a variable to hold the zoom of the new chapter
+
 
   // Some constants, such as default settings
   const CHAPTER_ZOOM = 15;
@@ -68,8 +70,9 @@ $(window).on('load', function() {
 	if (feature.properties && feature.properties.tooltipContent) {
 			tooltipContent += feature.properties.tooltipContent;
 	}
-
-	layer.bindTooltip(tooltipContent, {className: tooltipStyle, permanent: true, sticky: true}).openTooltip();
+	if (feature.properties.minZoom <= chapterZoom) {
+		layer.bindTooltip(tooltipContent, {className: tooltipStyle, permanent: true, sticky: true}).openTooltip();
+	}
   }
 
   /**
@@ -294,6 +297,10 @@ $(window).on('load', function() {
       pixelsAbove[i] = pixelsAbove[i-1] + $('div#container' + (i-1)).height() + chapterContainerMargin;
     }
     pixelsAbove.push(Number.MAX_VALUE);
+	  
+//
+// Here begins the function triggered by every scroll event. Most of the important code is in here
+//
 
     $('div#contents').scroll(function() {
       var currentPosition = $(this).scrollTop();
@@ -362,6 +369,7 @@ $(window).on('load', function() {
           // Fly to the new marker destination if latitude and longitude exist
           if (c['Latitude'] && c['Longitude']) {
             var zoom = c['Zoom'] ? c['Zoom'] : CHAPTER_ZOOM;
+	    chapterZoom = zoom;
             map.flyTo([c['Latitude'], c['Longitude']], zoom, {
               animate: true,
               duration: 2, // default is 2 seconds
