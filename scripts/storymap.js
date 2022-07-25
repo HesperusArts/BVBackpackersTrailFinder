@@ -450,7 +450,7 @@ $(window).on('load', function() {
         markers[i].on('click', function() {
           var pixels = parseInt($(this)[0]['_pixelsAbove']) + 5;
           $('div#contents').animate({
-            scrollTop: pixels + 'px'});
+            scrollTop: pixels + 'px'}, 0);
         });
         bounds.push(markers[i].getLatLng());
       }
