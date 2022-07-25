@@ -70,7 +70,7 @@ $(window).on('load', function() {
 	if (feature.properties && feature.properties.tooltipContent) {
 			tooltipContent += feature.properties.tooltipContent;
 	}
-	if (feature.properties.minZoom <= chapterZoom) {
+	if (feature.properties.minzoom <= chapterZoom) {
 		layer.bindTooltip(tooltipContent, {className: tooltipStyle, permanent: true, sticky: true}).openTooltip();
 	}
   }
